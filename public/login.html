@@ -1,63 +1,39 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script defer src="login.js"></script> 
-</head>
-<body>
-    <h2>Login</h2>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <br>
-        <button type="submit">Login</button>
-    </form>
 
-    <p id="errorMessage" style="color: red;"></p>
-</body>
-</html> 
- -->
+<!DOCTYPE html>
+    <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login Page</title>
+            <script src="https://cdn.tailwindcss.com"></script>
 
- <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+            <script defer src="login.js"></script> 
+        </head>
 
-    <script defer src="login.js"></script> 
-</head>
+        <body class="flex items-center justify-center min-h-screen bg-blue-200">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                <h2 class="text-xl font-semibold text-center mb-4">Login</h2>
 
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-        <h2 class="text-xl font-semibold text-center mb-4">Login</h2>
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label for="username" class="block text-gray-700 font-medium">Username:</label>
+                        <input type="text" id="username" name="username"
+                            class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
 
-        <form id="loginForm" class="space-y-4">
-            <div>
-                <label for="username" class="block text-gray-700 font-medium">Username:</label>
-                <input type="text" id="username" name="username"
-                    class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div>
+                        <label for="password" class="block text-gray-700 font-medium">Password:</label>
+                        <input type="password" id="password" name="password"
+                            class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
+                        Login
+                    </button>
+                </form>
+
+                <p id="errorMessage" class="text-red-500 text-sm mt-2 text-center"></p>
             </div>
-
-            <div>
-                <label for="password" class="block text-gray-700 font-medium">Password:</label>
-                <input type="password" id="password" name="password"
-                    class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-
-            <button type="submit" 
-                class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
-                Login
-            </button>
-        </form>
-
-        <p id="errorMessage" class="text-red-500 text-sm mt-2 text-center"></p>
-    </div>
-</body>
-</html>
+        </body>
+    </html>

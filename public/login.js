@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value.trim();
 
         if (!username || !password) {
-            errorMessage.textContent = "Username dan Password harus diisi!";
+            errorMessage.textContent = "Username & Password tidak boleh kosong!";
             return;
         }
 
@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const result = await response.json();
 
             if (response.ok) {
-                alert("Login berhasil!");
+                alert("Login berhasil");
             } else {
                 errorMessage.textContent = result.message;
             }
         } catch (error) {
-            errorMessage.textContent = "Gagal terhubung ke server.";
+            errorMessage.textContent = "Gagal terhubung ke server";
         }
     });
 });
